@@ -88,6 +88,7 @@ def db_connect():
 def public_record(row):
     return {
         **row,
+        "value_wei": str(row["value_wei"]),
         "block_time": row["block_time"].isoformat() if row["block_time"] else None,
         "saved_at": row["saved_at"].isoformat(),
     }
